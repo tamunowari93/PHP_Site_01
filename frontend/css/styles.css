@@ -1,0 +1,66 @@
+    html {
+        background-color: #f6f0e7e4;
+        width: 99%;
+        border: 0px;
+        font: 15px Helvetica, serif;
+    }
+    
+    div.header {
+        position: relative;
+        top: 7;
+        right: 2;
+        left: 12;
+        width: 99%;
+        display: inline-block;
+    }
+    
+    div.header button {
+        right: -1050;
+        padding: 6px;
+        width: 100px;
+        margin-right: 1px;
+        display: inline-block;
+        position: relative;
+        align-content: right;
+    }
+    
+    .body {
+        font-family: 18px Helvetica, serif;
+        position: relative;
+        top: 18;
+        bottom: 23;
+        width: 99%;
+        height: auto;
+        display: flex;
+        justify-content: left;
+    }
+    
+    table,
+    td {
+        padding: 6px;
+        display: inline-flex;
+    }
+    
+    .footer {
+        position: fixed;
+        bottom: 12;
+        width: 99%;
+        text-align: center;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px;
+        padding: 10px;
+        width: 100%;
+        bottom: 10px;
+    }
+    
+    .grid-container>span {
+        padding: 20px;
+        border: solid;
+        margin: 18px;
+        min-width: 210px;
+        font: helvetica 15;
+    }
