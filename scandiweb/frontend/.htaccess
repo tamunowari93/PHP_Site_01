@@ -1,3 +1,0 @@
-<IfModule mod_rewrite.c>
-    Options -Multiviews RewriteEngine On RewriteBase /PHP_Site_01/frontend RewriteCond %{REQUEST_FILENAME} !-d RewriteCond %{REQUEST_FILENAME} !-f RewriteRule ^(.+)$ addProducts.php?url= $1 [QSA,L]
-</IfModule>
