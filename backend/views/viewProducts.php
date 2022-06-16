@@ -1,5 +1,5 @@
 <?php
-  require_once 'private/initialize.php';
+  require_once '../data/initialize.php';
   //Retireve product from Database
   $dvd = find_DVD();
   while ($prodDVD = $dvd->fetch_object()) {      
