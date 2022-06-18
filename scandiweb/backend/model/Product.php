@@ -57,7 +57,7 @@ class Product {
       return number_format($this->size) . 'kg';
     }
     public function set_sku($value) {
-      $value = ("DVD02205-0" . $value);
+      $value = ("DVD-0" . $value);
       $this->sku = ($value);
     }
     public function set_size($value) {
@@ -75,7 +75,7 @@ class Product {
       return ($this->dimensions);
     }
     public function set_sku($value) {
-      $value = ("FRN02205-0" . $value);
+      $value = ("FRN-0" . $value);
       $this->sku = ($value);
     }
     public function set_dimensions($v1,$v2,$v3) {
@@ -93,7 +93,7 @@ class Product {
       return number_format($this->weight_kg);
     }
     public function set_sku($value) {
-      $value = ("BK02205-0" . $value);
+      $value = ("BK-0" . $value);
       $this->sku = ($value);
     }
     public function set_weight_kg($value) {

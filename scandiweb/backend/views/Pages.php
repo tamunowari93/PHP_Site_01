@@ -1,5 +1,8 @@
 <?PHP
+    require_once'updatePage.php';
+    require_once'viewPage.php';
+
     function getPage() {
-        echo '<br>' . 'Page 01';
+        pageDetails();
     }
 ?>

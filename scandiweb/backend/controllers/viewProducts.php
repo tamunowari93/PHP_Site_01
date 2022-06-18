@@ -15,6 +15,7 @@
     $price[] = $prodFrn->price;
     $type[] = $prodFrn->dimensions;
   }
+  
   $book = find_Book();
   while ($prodBK = $book->fetch_object()) {      
     $sku[] = $prodBK->sku;
