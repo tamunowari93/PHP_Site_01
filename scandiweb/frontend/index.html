@@ -11,19 +11,30 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-sm" style="padding:23px;border-bottom:1px solid;">
-        <div class="container-fluid ">
-            <h3>Page Title</h3>
-            <div class="collapse navbar-collapse justify-content-end">
-                <button type="button" class="btn btn-primary">Button 01</button>
-                <button type="button" class="btn btn-primary">Button 02</button>
-            </div>
+<nav class="navbar navbar-expand-sm" style="padding:18px;border-bottom:1px solid;">
+    <div class="container-fluid">
+        <h2>Title</h2>
+        <div class="collapse navbar-collapse justify-content-end">
+            <button type="button" class="btn btn-primary" form="productform" value="Submit" style="margin: 3px">BUTTON 01</button>
+            <button onclick="altBtnFunct()" class="btn btn-light " style="margin: 3px ">BUTTON 02</button>
         </div>
-    </nav>
+    </div>
+</nav>
 
-
-
+<body>
+    <form method="post" style="padding:45px;" action="/action_page.php" id="productform">
+        <div class="form-inline input-group input-group-sm col-3" style="padding-bottom:8px; ">
+            <label for="sku " style="padding-right:55px; ">SKU</label>
+            <input type="text " class="form-control input-sm " id=" sku ">
+        </div>
+        <div class="form-inline input-group input-group-sm col-3" style="padding-bottom:8px; ">
+            <label for="price " style="padding-right:55px; ">Price</label>
+            <input type="number " class="form-control input-sm " id="price ">
+        </div>
+    </form>
 </body>
+<footer class="text-center fixed-bottom " style="padding:9px;border-top:1px solid; ">
+    <p> ScandiWeb Test Assignment</p>
+</footer>
 
 </html>
