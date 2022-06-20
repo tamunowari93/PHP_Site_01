@@ -1,0 +1,26 @@
+    .navbar {
+        padding: 23px;
+        border-bottom: 1px solid;
+    }
+    
+    .btn {
+        margin: 4px
+    }
+    
+    .pageInfo {
+        padding: 45px;
+    }
+    
+    .form-inline {
+        padding-bottom: 8px
+    }
+    
+    label {
+        padding-right: 55px
+    }
+    
+    footer {
+        padding: 12px;
+        border-top: 1px solid
+    }
+    /* grid */

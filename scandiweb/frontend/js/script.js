@@ -1,6 +1,7 @@
-function viewProducts() {
-    document.location.href = "viewProducts.php";
-}
+// Process AddPage Requests & Validaton
+// Get ViewPage Details
+
+
 $(document).ready(function() {
     var size = document.getElementById("size");
     var height = document.getElementById("height");
@@ -13,13 +14,31 @@ $(document).ready(function() {
         furniture: [height, width, length],
         book: weight,
     }
-    $("select").change(function() {
-        $(size).hide();
-        $(height).hide();
-        $(width).hide();
-        $(length).hide();
-        $(weight).hide();
-        var typeId = prod_type[this.value];
-        $(typeId).show(), $(description).show();
-    });
+
 });
+
+function pageDetails() {
+    getheadNav();
+    getBody();
+    footer();
+}
+
+function getheadNav() {
+    $title = 'Add Products';
+    $title;
+}
+
+function getBody() {
+    productForm();
+}
+
+function productForm() {
+    // For Product Input Form
+    $productEntry = '<br> Products Input Form';
+    $productEntry;
+}
+
+function footer() {
+    $footer = '<br> Scandiweb Test';
+    $footer;
+}

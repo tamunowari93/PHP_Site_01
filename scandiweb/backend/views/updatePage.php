@@ -11,10 +11,10 @@
     }
     
     function getBody() {
-        productsData();
+        productForm();
     }
 
-    function productsData() {
+    function productForm() {
         // For Product Input Form
         $productEntry = '<br>'.'Products Input Form';
         echo $productEntry;
