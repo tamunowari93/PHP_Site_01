@@ -18,16 +18,17 @@
         <h4>View Products</h4>
     </div>
     <div class="nav-buttons container-fluid justify-content-end">
-        <button class="btn btn-primary" form="productform" value="Submit">ADD</button>
-        <button onclick="altBtnFunct()" class="btn btn-light ">MASS DELETE</button>
+        <a href="addProduct.html"><button class="btn btn-primary">ADD</button></a>
+        <button onclick="deleteFunct()" class="btn btn-light ">MASS DELETE</button>
     </div>
 </nav>
 
 <body>
-    <form method="post" action="/action_page.php" id="productform">
-        <!-- Saved for ProductGrid with Check -->
-    </form>
+    <!-- Saved for ProductGrid with Check -->
+    <p id="demo"></p>
+
 </body>
+
 <footer class="text-center fixed-bottom ">
     <h6> ScandiWeb Test Assignment</h6>
 </footer>

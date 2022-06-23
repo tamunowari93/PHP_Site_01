@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Product Add Page</title>
+</head>
+
+<nav class="navbar navbar-expand-sm container-fluid">
+    <div class=" container-fluid ">
+        <h4>Add Product</h4>
+    </div>
+    <div class="nav-buttons container-fluid justify-content-end">
+        <input type="button" class="btn btn-primary" form="productform" id="saveButton" value="SAVE" />
+        <a href="listProduct.html"><button class="btn btn-light ">CANCEL</button></a>
+    </div>
+</nav>
+
+<body>
+    <div class="pageInfo">
+        <form id="productform" action="post.php" method="post" class="g-3 needs-validation" novalidate>
+            <div class=" form-inline input-group input-group-sm col-4 ">
+                <label for="sku ">SKU</label>
+                <input type="text " class="form-control input-sm " id="sku" required>
+                <div class="invalid-feedback ">Please enter a valid sku.</div>
+            </div>
+            <div class=" form-inline input-group input-group-sm col-4 ">
+                <label for="name ">Name</label>
+                <input type="text " class="form-control input-sm " id="price ">
+            </div>
+            <div class=" form-inline input-group input-group-sm col-4 ">
+                <label for="price ">Price ($)</label>
+                <input type="number " id="price" min="0 " class="form-control input-sm ">
+            </div>
+            <div class=" form-inline input-group input-group-sm col-4 ">
+                <label for="type ">Type Switcher</label>
+                <select class="form-control input-sm " id="type ">
+                    <option selected disabled></option>
+                    <option value="dvd ">DVD</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="book ">Book</option>
+                </select>
+            </div>
+            <div id="divSize " style="display:none " class=" form-inline input-group input-group-sm col-4 ">
+                <label for="size ">Size (MB)</label>
+                <input type="number " id="size" min="0 " class="form-control input-sm "><br><br>
+                <h6>Please, provide disc space in MB</h6>
+            </div>
+            <div id="divHeight " style="display:none " class=" form-inline input-group input-group-sm col-4 ">
+                <label for="height ">Height (CM)</label>
+                <input type="number " id="height" min="0 " class="form-control input-sm ">
+            </div>
+            <div id="divWidth " style="display:none " class=" form-inline input-group input-group-sm col-4 ">
+                <label for="width ">Width (CM)</label>
+                <input type="number " id="width" min="0 " class="form-control input-sm ">
+            </div>
+            <div id="divLength " style="display:none; " class=" form-inline input-group input-group-sm col-4 ">
+                <label for="length ">Length (CM)</label>
+                <input type="number " id="length" min="0 " class="form-control input-sm "><br><br>
+                <h6>Please, provide dimensions in CM</h6>
+            </div>
+            <div id="divWeight " style="display:none; " class=" form-inline input-group input-group-sm col-4 ">
+                <label for="length ">Weight (kg)</label>
+                <input type="number " id="weight" min="0 " class="form-control input-sm "><br><br>
+                <h6>Please, provide book weight in Kg</h6>
+            </div>
+
+        </form>
+    </div>
+</body>
+<footer class="text-center fixed-bottom ">
+    <h6> ScandiWeb Test Assignment</h6>
+</footer>
+
+</html>

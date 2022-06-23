@@ -9,6 +9,11 @@
     
     .pageInfo {
         padding: 45px;
+        max-width: 100%;
+    }
+    
+    .error {
+        border: 2px solid red;
     }
     
     .form-inline {
