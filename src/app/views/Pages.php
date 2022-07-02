@@ -1,16 +1,14 @@
 <?PHP
-    require_once'../data/initialize.php';    
-    require_once'updatePage.php';
-    require_once'viewPage.php';
+    namespace MyApp\Views;
 
-    function getPage() {
-        pageDetails();
+    class View {
+    public function __construct()
+    {
+      echo " Product List Updated ";
     }
-
-    echo 'Scandiweb Start!' . '<br><br>';
-    getPage();
-
-    
+  }
   
-
+  
+  // require_once'../data/initialize.php';    
+  
 ?>
