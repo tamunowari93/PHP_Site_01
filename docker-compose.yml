@@ -6,10 +6,4 @@ services:
     volumes:
      - .:/src
     working_dir: /src
-
-  nginxphp:
-    build: .
-    image: app
-    ports:
-      - 80:80
-    
+       
