@@ -1,7 +1,10 @@
 <?php
 
-namespace App\Class;
-// PRODUCT CLASS WITH GETTERS & SETTERS
+// namespace App\Classes;
+
+  
+
+
   class Product {
     public $sku;
     public $name;

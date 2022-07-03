@@ -6,4 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'HTML_Common2' => array($vendorDir . '/pear/html_common2'),
 );
