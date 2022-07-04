@@ -13,4 +13,5 @@ return array(
     'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
     'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
     'Aura\\Sql\\' => array($vendorDir . '/aura/sql/src'),
+    'App\\' => array($baseDir . '/src'),
 );
