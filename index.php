@@ -1,9 +1,11 @@
 <?php
+use App\Classes\Product as Product;
 
-require_once realpath("/vendor/autoload.php");
+require_once  __DIR__ . '/vendor/autoload.php';
 
-$addProduct = new App/Product();
-echo $addProduct->add();
+$addProduct = new Product();
+
+echo $addProduct;
 
 
 ?>

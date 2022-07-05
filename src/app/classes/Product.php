@@ -1,12 +1,14 @@
 <?php
 
-namespace App;
+namespace App\Classes;
 
-  class Product {
-    public function add() {
-      return ' New Product Added ';
-    }
+class Product 
+{
+  public function __construct() 
+  {
+    return ' New Product Added ';
   }
+}
   
 //   class Product {
 //     public $sku;
