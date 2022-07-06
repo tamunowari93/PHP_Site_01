@@ -1,11 +1,16 @@
 <?php
-require_once  __DIR__ . '/vendor/autoload.php';
-use App\Classes\Product;
 
+require_once '/vendor/autoload.php';
+use App\Classes\Product();
 
-$addProduct = new Product();
+$container = new Product();
 
-echo $addProduct;
+$container->add(Acme\Foo::class)->addArgument(Acme\Bar::class);
+$container->add(Acme\Bar::class);
 
+$foo = $container->get(Acme\Foo::class);
+
+var_dump($foo instanceof Acme\Foo);      // true
+var_dump($foo->bar instanceof Acme\Bar); // tru
 
 ?>
