@@ -6,7 +6,8 @@ class Product
 {
   public function __construct() 
   {
-    return ' New Product Added ';
+    $print = ' New Product Added ';
+    print_r
   }
 }
   
