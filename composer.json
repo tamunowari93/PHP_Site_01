@@ -1,4 +1,14 @@
 {
+    "repositories": [{
+        "type": "vcs",
+        "url": "https://github.com/tamunowari93/PHP_Site_01"
+    }],
+
+    "require": {
+        "app/src": "dev-master",
+        "monolog/monolog": "^3.1"
+    },
+
     "autoload": {
         "psr-4": {
             "App\\": "src/"
