@@ -1,16 +1,19 @@
 <?php
-
-require_once '/vendor/autoload.php';
-use App\Classes\;
-
-$container = new Product();
-
-$container->add(Acme\Foo::class)->addArgument(Acme\Bar::class);
-$container->add(Acme\Bar::class);
-
-$foo = $container->get(Acme\Foo::class);
-
-var_dump($foo instanceof Acme\Foo);      // true
-var_dump($foo->bar instanceof Acme\Bar); // tru
-
-?>
+require_once "vendor/autoload.php";
+  
+use GuzzleHttp\Client;
+  
+$client = new Client([
+    // Base URI is used with relative requests
+    'base_uri' => 'https://reqres.in',
+]);
+  
+$response = $client->request('GET', '/api/users', [
+    'query' => [
+        'page' => '2',
+    ]
+]);
+  
+$body = $response->getBody();
+$arr_body = json_decode($body);
+echo "<pre>" print_r($arr_body);"</pre>"

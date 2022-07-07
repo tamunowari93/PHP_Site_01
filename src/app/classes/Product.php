@@ -1,15 +1,14 @@
 <?php
 
-namespace App\Classes;
+// namespace App\Classes;
 
-class Product 
-{
-  public function __construct() 
-  {
-    $print = ' New Product Added ';
-    print_r
-  }
-}
+// class Product 
+// {
+//   public function __construct() 
+//   {
+//     print_r ' New Product Added ';
+//   }
+// }
   
 //   class Product {
 //     public $sku;
