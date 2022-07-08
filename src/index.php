@@ -4,7 +4,7 @@ require_once "/App/require.php";
 
 
 $product = new Product('firstProduct-001', 'Jaguar', '90000');
-
+echo $product->getProduct();
 
 // use GuzzleHttp\Client;
   
