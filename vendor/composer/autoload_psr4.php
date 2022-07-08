@@ -22,7 +22,7 @@ return array(
     'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),
     'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
     'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
-    'App\\' => array($baseDir . '/src'),
+    'App\\' => array($baseDir . '/src/App'),
     'Amp\\WindowsRegistry\\' => array($vendorDir . '/amphp/windows-registry/lib'),
     'Amp\\Sync\\' => array($vendorDir . '/amphp/sync/src'),
     'Amp\\Socket\\' => array($vendorDir . '/amphp/socket/src'),

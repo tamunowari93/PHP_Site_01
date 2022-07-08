@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Model;
+
 class Product
 {
     private $sku;
@@ -15,7 +17,7 @@ class Product
 
     public function getProduct(): string
     {
-        return $this->sku;
+        return $this->sku . " " . $this->name . " " . $this->price;
     }
 }
   

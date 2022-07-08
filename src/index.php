@@ -1,6 +1,7 @@
 <?php
-require_once "/App/require.php";
+require_once 'App/require.php';
 
+use App\Model\Product as Product;
 
 
 $product = new Product('firstProduct-001', 'Jaguar', '90000');
