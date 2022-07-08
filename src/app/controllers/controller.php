@@ -1,14 +1,15 @@
 <?php
 
-namespace MyApp\Controllers;
+namespace App\Controllers;
 
-  class Controller {
-    public function __construct()
-    {
-      echo " Controller Created ";
-    }
-    
+class Controller {
+  
+  public function __construct()
+  {
+    echo " Controller Created ";
   }
+}
+
 
   // // Get Form Data & Redirect to List Page
   // $sku = htmlspecialchars($_POST['sku']);
