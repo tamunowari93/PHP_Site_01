@@ -1,14 +1,11 @@
 {
-
-    "require": {
-        "monolog/monolog": "^3.1",
-        "php-http/guzzle6-adapter": "^2.0",
-        "amphp/http-server": "^2.1"
-    },
-
+    
     "autoload": {
-        "psr-4": {
+        "psr-15": {
             "App\\": "src/App"
         }
+    },
+    "require": {
+        "monolog/monolog": "^3.1"
     }
 }

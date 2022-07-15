@@ -1,21 +1,12 @@
 <?php
-// require_once 'App/require.php';
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/App/require.php';
 
+use App\Controllers\Logger;
+Logger::enableSystemLogs();
+$log_msg = Logger::getInstance();
+$log_msg->info('Hello World');
 
-use GuzzleHttp\Client;
-$client = new Client([
-    // Base URI is used with relative requests
-    'base_uri' => 'https://reqres.in',
-]);
-  
-$response = $client->request('GET', '/api/users', [
-    'query' => [
-        'page' => '2',
-    ]
-]);
-  
-$body = $response->getBody();
-$arr_body = json_decode($body);
-echo "<pre>"; print_r($arr_body); echo"</pre>";
+use App\Controllers\App_config;
+$LOG_PATH = App_config::get('LOG_PATH', '');
+echo "[LOG_PATH]: $LOG_PATH";

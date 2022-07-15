@@ -6,5 +6,4 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'cash' => array($vendorDir . '/cash/lrucache/src'),
 );
