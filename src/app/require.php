@@ -1,12 +1,15 @@
 <?php
 
-require_once __DIR__ . '/../../vendor/autoload.php';
 
-use App\Controllers\App_config;
-$LOG_PATH = App_config::get('LOG_PATH', '');
-echo "[LOG_PATH]: $LOG_PATH";
 
-use App\Controllers\Logger;
-Logger::enableSystemLogs();
-$log_msg = Logger::getInstance();
-$log_msg->info('Hello World');
+// use Monolog\Logger;
+// use Monolog\Handler\StreamHandler;
+
+// $logger = new Logger('access');
+//     $logger->pushHandler(new StreamHandler(fopen('/access-log.txt', 'r+')));
+    
+//     $dispatcher = new Dispatcher([
+//         new Middlewares\AccessLog($logger)
+//     ]);
+    
+//     $response = $dispatcher->dispatch(new ServerRequest());

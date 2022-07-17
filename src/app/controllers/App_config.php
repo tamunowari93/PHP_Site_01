@@ -2,18 +2,55 @@
 
 namespace App\Controllers;
 
+// use Monolog\Level;
+// use Monolog\Logger;
+// use Monolog\Handler\StreamHandler;
+// use Monolog\Handler\FirePHPHandler;
+
 class App_config
 {
-    private static $app_config;
+  // public function logConfig()
+  // {
+  //   // Create the logger
+  //   $logger = new Logger('app_logger');
     
-    public static function get($key, $default = null)
-    {
-      if (is_null(self::$app_config)) {
-          self::$app_config = require_once(__DIR__.'/../../app_config.php');
-      }
-  
-      return !empty(self::$app_config[$key])?self::$app_config[$key]:$default;
-    }
+  //   // Now add some handlers
+  //   $logger->pushHandler(new StreamHandler(__DIR__.'/app.log', Level::Debug));
+  //   $logger->pushHandler(new FirePHPHandler());
+    
+  //   $logger->info('Logger is ready');
+    
+  // }
+
+  public function log()
+  {
+    dump('run log');
+  }
+
+  // public function sessionConfig()
+  // {
+  //   // start session & get time
+  //   $time = time();
+  //   session_start();
+    
+  //   // store an array
+  //   $sessionID = $_SERVER['REMOTE_ADDR'];
+  //   $startTime = $_SESSION[$time];
+  //   $endTime = $_SESSION['lastaccess'];
+    
+  //   // Time difference since user sent last request
+  //   $duration = $endTime - $startTime;
+
+  //   // remove session
+  //   if( isset( $endTime ) && ( $duration <= 0 ) ) 
+  //   {
+  //     // Clear the session
+  //     session_unset();
+  //     // Destroy the session
+  //     session_destroy();
+  //   }
+  // }
+    
 }
  
 
@@ -28,10 +65,7 @@ class App_config
   // $length = htmlspecialchars($_POST['length']);
   // $weight_kg = htmlspecialchars($_POST['weight']);
 
-  // echo $sku;
+  
   // // Pass Form Data to Model Controller
     
   // // Validate and Save to Database
-
-
-?>

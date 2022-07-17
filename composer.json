@@ -1,11 +1,11 @@
 {
-    
+
     "autoload": {
         "psr-15": {
-            "App\\": "src/App"
+            "App\\": "src/app"
         }
     },
     "require": {
-        "monolog/monolog": "^3.1"
+        "symfony/var-dumper": "^6.1"
     }
 }
