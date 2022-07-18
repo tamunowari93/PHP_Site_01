@@ -2,7 +2,7 @@
 
 // require_once __DIR__ . '/App/require.php';
 require_once __DIR__ . '/../vendor/autoload.php';
-// use App\Controllers\App_config;
+use App\Controllers\App_config;
 
 
 $log = new App\Controllers\App_config();

@@ -41,7 +41,6 @@ class ComposerStaticInit8cdc4756feb0b0ab9443d56c5f143cf9
     public static $classMap = array (
         'App\\Controllers\\App_config' => __DIR__ . '/../..' . '/src/app/Controllers/App_config.php',
         'App\\Controllers\\Logger' => __DIR__ . '/../..' . '/src/app/Controllers/Logger.php',
-        'App\\Controllers\\Router' => __DIR__ . '/../..' . '/src/app/Controllers/Router.php',
         'App\\Model\\Product' => __DIR__ . '/../..' . '/src/app/Model/Product.php',
         'App\\View\\Page' => __DIR__ . '/../..' . '/src/app/View/Page.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',

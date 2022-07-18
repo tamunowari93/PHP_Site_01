@@ -8,7 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Controllers\\App_config' => $baseDir . '/src/app/Controllers/App_config.php',
     'App\\Controllers\\Logger' => $baseDir . '/src/app/Controllers/Logger.php',
-    'App\\Controllers\\Router' => $baseDir . '/src/app/Controllers/Router.php',
     'App\\Model\\Product' => $baseDir . '/src/app/Model/Product.php',
     'App\\View\\Page' => $baseDir . '/src/app/View/Page.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
