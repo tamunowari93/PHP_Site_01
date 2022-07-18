@@ -24,7 +24,7 @@ class App_config
 
   public function log()
   {
-    dump('run log');
+    var_dump('run log');
   }
 
   // public function sessionConfig()

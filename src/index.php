@@ -1,12 +1,11 @@
 <?php
 
 // require_once __DIR__ . '/App/require.php';
-use App\Controllers\App_config;
-
 require_once __DIR__ . '/../vendor/autoload.php';
+// use App\Controllers\App_config;
 
 
-$log = new App_config();
+$log = new App\Controllers\App_config();
 $log->log();
 
 // use App\Controllers\App_config;
