@@ -16,6 +16,8 @@ $router->get('/about', function() {
 $router->run();
 
 
+echo 'Composer not Running!';
+
 
 
 // use App\Controllers\App_config;
