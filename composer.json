@@ -1,5 +1,11 @@
 {
-
+    "name": "temple/scandiweb",
+    "description": "Simple Custom PHP Product Website",
+    "type": "project",
+    "authors": [{
+        "name": "JayR Temple",
+        "email": "tamunowari93@icloud.com"
+    }],
     "autoload": {
         "psr-4": {
             "App\\": "src/app"
