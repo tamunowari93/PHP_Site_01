@@ -4,8 +4,12 @@
 
     // require_once __DIR__ . '/../vendor/autoload.php';
     // use App\Controllers\App_config;
+
+    if (! defined('App_Version')){
+        require_once dirname(__DIR__) . '/autoload.php';
+    }
     
-echo "Just Index works with version:".phpversion();
+    echo "Just Index works with version:" . phpversion();
 
 
 // use App\Controllers\App_config;
