@@ -30,7 +30,8 @@
     $addDVD = addDVD($skuD, $name, $priceD, $sizeD, $description);
   }
   
-  function saveFurniture($sku, $name, $price, $height, $width, $length, $description){
+  function saveFurniture($sku, $name, $price, $height, $width, $length, $description)
+  {
     $furniture = new Furniture();
     $furniture->set_sku($sku);
     $furniture->set_name($name);
@@ -43,7 +44,8 @@
     $addFurniture= addFurniture($skuF, $name, $priceF, $dimensions, $description);
   }
   
-  function saveBook($sku, $name, $price, $weight_kg, $description){
+  function saveBook($sku, $name, $price, $weight_kg, $description)
+  {
     $book = new Book();
     $book->set_sku($sku);
     $book->set_name($name);

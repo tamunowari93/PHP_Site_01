@@ -3,7 +3,7 @@
         'name' => 'temple/scandiweb',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '4031523dfb0e37283dbc9acb36802d3ab3133940',
+        'reference' => '75fff9500b896e70e99a56ef06c1e15a55cd042f',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -31,7 +31,7 @@
         'temple/scandiweb' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '4031523dfb0e37283dbc9acb36802d3ab3133940',
+            'reference' => '75fff9500b896e70e99a56ef06c1e15a55cd042f',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

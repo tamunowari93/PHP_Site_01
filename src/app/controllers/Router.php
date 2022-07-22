@@ -6,6 +6,7 @@ namespace App\Controllers;
 class Router
 {
     private array $handler;
+    private $notFoundHandler;
     private const METHOD_POST = 'POST';
     private const METHOD_GET = 'GET';
     
@@ -18,6 +19,11 @@ class Router
     public function post(string $path, $handler): void
     {  
         $this->addHandler(self::METHOD_POST, $path, $handler); 
+    }
+    
+    public function addNotFoundHandler($handler): void
+    {
+        $this->notFoundHandler = $handler;
     }
     
     public function addHandler(string $method, string $path, $handler): void
@@ -44,9 +50,23 @@ class Router
             }
         }
         
+        if (is_string($callback))
+        {
+            $parts = explode('::', $callback);
+            if (is_array($parts)) {
+                $className = array_shift($parts);
+                $handler = new $className;
+                
+                $method = array_shift($parts);
+                $callback = [$handler, $method];
+            }
+        }
+        
         if (!$callback) {
-            Header("HTTP/1.0 404 Not Found");
-            return;
+            header("HTTP/1.0 404 Not Found");
+            if (!empty($this->notFoundHandler)) {
+                $callback = $this->notFoundHandler;
+            }
         }
         
         call_user_func_array($callback, [
