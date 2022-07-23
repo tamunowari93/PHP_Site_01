@@ -1,26 +1,41 @@
 <?php
-define('App_Version', '0.0.1');
-$classmap = [
-    'App' => __DIR__ . '/src/',
-];
+/**
+ * An example of a project-specific implementation.
+ *
+ * After registering this autoload function with SPL, the following line
+ * would cause the function to attempt to load the \Foo\Bar\Baz\Qux class
+ * from /path/to/project/src/Baz/Qux.php:
+ *
+ *      new \Foo\Bar\Baz\Qux;
+ *
+ * @param string $class The fully-qualified class name.
+ * @return void
+ */
+spl_autoload_register(function ($class) {
 
-spl_autoload_register(function(string $classname) use ($classmap){
-    $parts = explode('\\', $classname);
-    
-    $namespace = array_shift($parts);
-    $classfile = array_pop($parts) . '.php';
-    
-    if (! array_key_exists($namespace, $classmap)) {
+    // project-specific namespace prefix
+    $prefix = 'App\\';
+
+    // base directory for the namespace prefix
+    $base_dir = __DIR__ . '/src/app/';
+
+    // does the class use the namespace prefix?
+    $len = strlen($prefix);
+    if (strncmp($prefix, $class, $len) !== 0) {
+        // no, move to the next registered autoloader
         return;
     }
 
-    $path = implode(DIRECTORY_SEPARATOR, $parts);
-    $file = $classmap[$namespace] . $path . DIRECTORY_SEPARATOR . $classfile;
+    // get the relative class name
+    $relative_class = substr($class, $len);
 
-    if (! file_exists($file) && ! class_exists($classname)){
-        return;
+    // replace the namespace prefix with the base directory, replace namespace
+    // separators with directory separators in the relative class name, append
+    // with .php
+    $file = $base_dir . str_replace('\\', '/', $relative_class) . '.php';
+
+    // if the file exists, require it
+    if (file_exists($file)) {
+        require $file;
     }
-   
-    require_once $file;
-    
 });

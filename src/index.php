@@ -1,15 +1,22 @@
 <?php
 
-    // require_once __DIR__ . '/App/require.php';
-
-    // require_once __DIR__ . '/../vendor/autoload.php';
-    // use App\Controllers\App_config;
-
     if (! defined('App_Version')){
         require_once dirname(__DIR__) . '/autoload.php';
     }
+    use App\Controllers\Router;
+    use App\Controllers\App_config;
+
     
-    echo "Just Index works with version:" . phpversion();
+    // $router = new Router();
+
+    // $router->get('/', function () {
+    //     echo 'Home Page';
+    // });
+
+    $message = new App_config();
+    $message->log();
+
+    
 
 
 // use App\Controllers\App_config;

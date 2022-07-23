@@ -9,7 +9,7 @@ class App_config
 
   public function log()
   {
-    dump('run log');
+    echo 'run log';
   }
 
 }
