@@ -1,10 +1,8 @@
 <?php
 
-    if (! defined('App_Version')){
-        require_once dirname(__DIR__) . '/autoload.php';
-    }
+    require_once dirname(__DIR__) . '/autoload.php';
+    
     use App\Controllers\App_config;
-
     
     // $router = new Router();
 
