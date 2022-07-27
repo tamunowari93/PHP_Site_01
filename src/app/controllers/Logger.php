@@ -3,15 +3,13 @@
 namespace App\Controllers;
 
 
-trait Logger
+class Logger
 {
-    public function sessionStart(){
+    public function start(){
         session_start();
-        
+        echo "Session Started!";
     }
 
-
-    
 }
 
     
