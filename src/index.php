@@ -1,26 +1,35 @@
 <?php
+// require_once __DIR__ . '/../autoload.php';
+// use App\Controllers\Router;
+// use App\Controllers\Routes;
 
-    require_once dirname(__DIR__) . '/autoload.php';
-    
-    use App\Controllers\App_config;
-    
-    // $router = new Router();
+$ch = curl_init();
+$url = "https://reqres.in/api/users?page=2";
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-    // $router->get('/', function () {
-    //     echo 'Home Page';
-    // });
+$resp = curl_exec($ch);
 
-    $message = new App_config();
-    $message->log();
+if($e= curl_error($ch)){
+    echo $e;
+}
+else {
+    $decoded = json_decode($resp);
+    print_r($decoded);
+}
 
-    
+curl_close($ch);
+
+// $route = new Routes();
+// $route->any('/addProduct', '/src/public/index.php');
 
 
-// use App\Controllers\App_config;
-// $LOG_PATH = App_config::get('LOG_PATH', '');
-// echo "[LOG_PATH]: $LOG_PATH";
 
-// use App\Controllers\Logger;
-// Logger::enableSystemLogs();
-// $log_msg = Logger::getInstance();
-// $log_msg->info('Hello World');
+
+
+// $router = new Router();
+// $router->post('/addProducts', function() {
+//     echo 'Add Products';
+// });
+// $router->run();
+// $router->get('/viewProducts');

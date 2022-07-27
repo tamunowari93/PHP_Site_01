@@ -6,7 +6,6 @@ namespace App\Controllers;
 class App_config
 {
   
-
   public function log()
   {
     echo 'run log';
