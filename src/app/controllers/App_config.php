@@ -6,9 +6,13 @@ namespace App\Controllers;
 class App_config
 {
   
-  public function log()
+  public function load()
   {
-    echo 'run log';
+  }
+  public function page01(){
+    $title = "Add Product";
+    // Add Body Features
+    print "<h1>Hello User, </h1><br> <p> This is the {$title} Page</p>";
   }
 
 }
